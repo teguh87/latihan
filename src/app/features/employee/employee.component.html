@@ -1,0 +1,22 @@
+<div class="form-container">
+    <form [formGroup]="userForm" (submit)="submit($event)">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>        
+                <td><input formControlName="name" type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input formControlName="email" type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label for="profil">Profile</label></td>
+                <td><textarea formControlName="profile" cols="30" rows="12"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6"><button type="submit" [disabled]="!userForm.valid">Save</button></td>
+            </tr>
+        </table>
+        
+    </form>
+</div>
